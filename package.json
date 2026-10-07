@@ -1,0 +1,19 @@
+{
+  "name": "trustlens-ai",
+  "version": "1.0.0",
+  "description": "TrustLens AI - AI Security, Privacy & Trust Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "npm --prefix server run dev",
+    "client:dev": "npm --prefix client run dev",
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "npm --prefix server start",
+    "render-build": "npm run build",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
